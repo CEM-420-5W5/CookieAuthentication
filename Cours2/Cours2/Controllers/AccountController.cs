@@ -61,9 +61,14 @@ namespace Cours2.Controllers
         }
 
         [Authorize]
-        public ActionResult<string[]> Data()
+        public ActionResult<string[]> PrivateData()
         {
             return new string[] { "figue", "banane", "noix" };
+        }
+
+        public ActionResult<string[]> PublicData()
+        {
+            return new string[] { "chien", "chat", "loutre" };
         }
 
         public async Task<ActionResult> Logout()
